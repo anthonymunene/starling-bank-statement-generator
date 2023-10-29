@@ -1,0 +1,13 @@
+spec:
+  alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+  functions:
+  - git:
+      branch: main
+      repo_clone_url: https://github.com:anthonymunene/starling-bank-statement-generator.git
+    name: starling-statements-generator
+    routes:
+    - path: /api
+    source_dir: /
+  name: starling-statements-generator

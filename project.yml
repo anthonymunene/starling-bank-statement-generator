@@ -1,0 +1,5 @@
+packages:
+  - name: starling-statements-generator
+    actions:
+      - name: starling-statements-generator 
+        runtime: nodejs:default
