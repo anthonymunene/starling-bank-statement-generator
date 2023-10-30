@@ -1,4 +1,4 @@
-async function main(args) {
+async function main() {
   try {
     const url = `https://openlibrary.org/search.json?q=harry+potter`;
     const harryPotterBooks = await fetch(url);
