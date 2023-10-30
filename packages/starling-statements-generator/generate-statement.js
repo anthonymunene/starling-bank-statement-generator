@@ -7,9 +7,10 @@ async function main(args) {
     const titles = results?.docs.map((result) => result.title);
     const uniqueTitles = [...new Set(titles)];
     console.log(uniqueTitles);
-    return { "body": titles };
+    return { body: titles };
   } catch (error) {
     console.log(error);
+    return error
   }
 }
 
