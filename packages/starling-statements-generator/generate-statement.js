@@ -13,4 +13,4 @@ async function main(args) {
   }
 }
 
-exports.main;
+exports.main = main;
