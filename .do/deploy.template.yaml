@@ -6,8 +6,8 @@ spec:
   - git:
       branch: main
       repo_clone_url: https://github.com:anthonymunene/starling-bank-statement-generator.git
-    name: starling-statements-generator
+    name: statements-generator
     routes:
     - path: /
     source_dir: /
-  name: starling-statements-generator
+  name: statements-generator
