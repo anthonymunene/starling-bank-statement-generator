@@ -1,5 +1,5 @@
 packages:
-  - name: statements-generator
+  - name: statements
     actions:
       - name: generate-statement 
         runtime: nodejs:default
