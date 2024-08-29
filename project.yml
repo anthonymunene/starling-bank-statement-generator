@@ -1,5 +1,16 @@
 packages:
   - name: statements
     actions:
-      - name: generate-statement 
-        runtime: nodejs:default
+      - name: generate-statement
+        runtime: nodejs:18
+    functions:
+      - name: generate-statement
+        binary: false
+        main: ""
+        runtime: nodejs:18
+        web: false
+        webSecure: false
+        parameters: {}
+        environment: {}
+        annotations: {}
+        limits: {}
