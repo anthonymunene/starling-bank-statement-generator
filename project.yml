@@ -9,6 +9,11 @@ packages:
         main: ""
         runtime: nodejs:18
         web: false
+        triggers:
+          - name: trigger-generate-statement
+            sourceType: scheduler
+            sourceDetails:
+              cron: "1 0 1 * *"
         webSecure: false
         parameters: {}
         environment: {}
