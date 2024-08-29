@@ -1,2 +1,4 @@
 # starling-bank-statement-generator
-A simple serverless function to generate statements
+
+Generates and sends monthly Statements using the Starling Bank API and Gmail API
+
