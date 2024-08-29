@@ -2,18 +2,11 @@ import fs from "fs";
 import Starling from "starling-developer-sdk";
 import {starlingAPIConfig} from "../variables.js";
 
-export const downloadPDF = async (pdf, start, end) => {
-
-    const fileName = `d3ployed-statement-period-${start}-to-${end}.pdf`
-    fs.writeFileSync(fileName, pdf)
-    console.log(`${fileName} saved successfully`)
-}
-
 export const getDaysInMonth = (monthNumber) => {
     try {
         const month = Number(monthNumber);
 
-        if (isNaN(month) || month < 1 || month > 12) {
+        if (Number.isNaN(month) || month < 1 || month > 12) {
             throw new Error("Invalid month number. Please enter a number between 1 and 12.");
         }
 
@@ -43,17 +36,15 @@ export const generatePDF = async (dependencies = {getLastThreeMonthsPeriod, down
         })
         const currentDate = new Date()
         const {start, end} = getLastThreeMonthsPeriod(currentDate)
-        client.account.getStatementForRange({
+        const fileName = `d3ployed-statement-period-${start}-to-${end}.pdf`;
+        const {data} = await client.account.getStatementForRange({
             accountUid: `${accountUUID}`,
             start,
             end,
             format: "application/pdf",
             responseType: "arraybuffer"
-        }).then(async ({data}) => {
-            await downloadPDF(data, start, end).then(() => {
-            });
         })
-
+        return {content:data, fileName}
     } catch (error) {
         console.log(error);
         return error;
