@@ -1,0 +1,32 @@
+{
+  "name": "generate-statement",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "statement generator for starling bank",
+  "main": "generate-statement.js",
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "infisical run --env=dev --path=/Starling node generate-statement.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/anthonymunene/starling-bank-statement-generator.git"
+  },
+  "author": "anthony munene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonymunene/starling-bank-statement-generator/issues"
+  },
+  "homepage": "https://github.com/anthonymunene/starling-bank-statement-generator#readme",
+  "dependencies": {
+    "@infisical/sdk": "^2.3.1",
+    "@types/nodemailer": "^6.4.15",
+    "express": "^4.19.2",
+    "googleapis": "^140.0.1",
+    "nodemailer": "^6.9.14",
+    "starling-developer-sdk": "1.0.3"
+  }
+}
