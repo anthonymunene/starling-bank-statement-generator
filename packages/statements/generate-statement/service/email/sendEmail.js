@@ -13,6 +13,7 @@ export const sendEmailService = async (
     }
 ) => {
     const {authClient, mailClient} = dependencies
+    const {fileName, content} = attachment
     try {
         authClient.setCredentials({
             refresh_token: googleEmailConfig.refreshToken,
@@ -35,7 +36,10 @@ export const sendEmailService = async (
             to,
             subject,
             html,
-            attachment
+            attachments: {
+                filename: fileName,
+                content
+            }
         };
         await smtpTransport.sendMail(mailOptions).then(info => console.log(info));
     } catch (error) {
