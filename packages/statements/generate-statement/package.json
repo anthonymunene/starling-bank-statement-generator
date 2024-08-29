@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "node --test",
-    "start": "infisical run --env=dev --path=/Starling node generate-statement.js"
+    "start": "infisical run --env=dev --path=/Apps/starling-d3ployed-statement-generator node generate-statement.js"
   },
   "repository": {
     "type": "git",
