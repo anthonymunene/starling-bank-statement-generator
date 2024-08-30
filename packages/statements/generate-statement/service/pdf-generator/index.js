@@ -26,7 +26,7 @@ export const getLastThreeMonthsPeriod = (currentDate) => {
     return {start: `${year}-${fromMonth}-01`, end: `${year}-${toMonth}-${getDaysInMonth(toMonth)}`};
 }
 
-export const generatePDF = async (dependencies = {getLastThreeMonthsPeriod, downloadPDF, Starling}) => {
+export const generatePDF = async (dependencies = {getLastThreeMonthsPeriod, Starling}) => {
     const {accountUUID, apiToken} = starlingAPIConfig
 
     try {
