@@ -4,10 +4,11 @@ import { appConfig} from "./service/variables.js";
 
 
 export const main = async () => {
-    // await generatePDF().then(pdf => {
-    //     sendEmail(appConfig.recipient, appConfig.subject, pdf)
-    // }).catch(error => {
-    //     console.error(error)
-    // })
-    console.log(appConfig.company)
+    await generatePDF().then(async pdf => {
+        await sendEmail(appConfig.recipient, appConfig.subject, pdf).then(result => {
+            return {body: `email sent to ${result.envelope.to[0]}`}
+        })
+    }).catch(error => {
+        console.error(error)
+    })
 }

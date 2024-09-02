@@ -7,7 +7,7 @@ packages:
       - name: generate-statement
         binary: false
         runtime: nodejs:18
-        web: false
+#        web: false
 #        triggers:
 #          - name: trigger-generate-statement
 #            sourceType: scheduler

@@ -41,7 +41,7 @@ export const sendEmailService = async (
                 content
             }
         };
-        await smtpTransport.sendMail(mailOptions).then(info => console.log(info));
+        return await smtpTransport.sendMail(mailOptions)
     } catch (error) {
         console.error(error);
     }

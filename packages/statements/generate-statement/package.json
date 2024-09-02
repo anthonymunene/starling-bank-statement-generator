@@ -5,7 +5,7 @@
   "description": "statement generator for starling bank",
   "main": "generate-statement.js",
   "engines": {
-    "node": "20"
+    "node": "18"
   },
   "scripts": {
     "test": "node --test",
