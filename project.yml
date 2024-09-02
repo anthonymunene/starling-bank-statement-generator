@@ -13,7 +13,17 @@ packages:
 #            sourceType: scheduler
 #            sourceDetails:
 #              cron: "24 0 30 * *"
-        parameters: {}
-        environment: {}
-        annotations: {}
-        limits: {}
+        environment:
+          MAIL_SUBJECT: "${MAIL_SUBJECT}"
+          RECIPIENT_NAME: "${RECIPIENT_NAME}"
+          RECIPIENT_EMAIL: "${RECIPIENT_EMAIL}"
+          COMPANY: "${COMPANY}"
+          GMAIL_OAUTH_CLIENT_ID: "${GMAIL_OAUTH_CLIENT_ID}"
+          GMAIL_OAUTH_CLIENT_SECRET: "${GMAIL_OAUTH_CLIENT_SECRET}"
+          GOOGLE_REDIRECT_URI: "${GOOGLE_REDIRECT_URI}"
+          GOOGLE_OAUTH_REFRESH_TOKEN: "${GOOGLE_OAUTH_REFRESH_TOKEN}"
+          GOOGLE_EMAIL: "${GOOGLE_EMAIL}"
+          STARLING_API_TOKEN: "${STARLING_API_TOKEN}"
+          STARLING_ACCOUNT_UUID: "${STARLING_ACCOUNT_UUID}"
+        limits:
+          memory: 512

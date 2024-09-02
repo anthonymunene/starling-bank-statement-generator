@@ -3,12 +3,11 @@ import {sendEmail} from "./service/email/createEmail.js";
 import { appConfig} from "./service/variables.js";
 
 
-async function main() {
-    await generatePDF().then(pdf => {
-        sendEmail(appConfig.recipient, appConfig.subject, pdf)
-    }).catch(error => {
-        console.error(error)
-    })
+export const main = async () => {
+    // await generatePDF().then(pdf => {
+    //     sendEmail(appConfig.recipient, appConfig.subject, pdf)
+    // }).catch(error => {
+    //     console.error(error)
+    // })
+    console.log(appConfig.company)
 }
-
-main()
