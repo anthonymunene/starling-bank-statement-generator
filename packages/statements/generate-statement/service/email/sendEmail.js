@@ -13,7 +13,7 @@ export const sendEmailService = async (
     }
 ) => {
     const {authClient, mailClient} = dependencies
-    const {fileName, content} = attachment
+    const {fileName, data} = attachment
     try {
         authClient.setCredentials({
             refresh_token: googleEmailConfig.refreshToken,
@@ -31,17 +31,18 @@ export const sendEmailService = async (
             },
         };
         const smtpTransport = mailClient(transportOptions);
-        // const mailOptions = {
-        //     from: googleEmailConfig.email,
-        //     to,
-        //     subject,
-        //     html,
-        //     attachments: {
-        //         filename: fileName,
-        //         content
-        //     }
-        // };
-        // return await smtpTransport.sendMail(mailOptions)
+        const mailOptions = {
+            from: googleEmailConfig.email,
+            to,
+            subject,
+            html,
+            attachments: {
+                filename: fileName,
+                content: data,
+                contentType:"application/pdf"
+            }
+        };
+        return await smtpTransport.sendMail(mailOptions)
     } catch (error) {
         console.error(`sendEmailService Error:${error}`);
     }
