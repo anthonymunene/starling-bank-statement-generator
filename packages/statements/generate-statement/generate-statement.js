@@ -4,14 +4,20 @@ import { appConfig} from "./service/variables.js";
 
 
 export const main = async () => {
-    await generatePDF().then(async pdf => {
-        return {body: `email sent to ${pdf}`}
-        // await sendEmail(appConfig.recipient, appConfig.subject, pdf).then(result => {
-        //     return {body: `email sent to ${result.envelope.to[0]}`}
-        // })
-    }).catch(error => {
-        console.error(`generateStatement Error: ${error}`)
-        return {body:`generateStatement Error: ${error}` }
-    })
-    return {body: `generated pdf ${appConfig.company}`}
+    const pdf = await generatePDF()
+
+
+    return {body: pdf}
+    // await generatePDF().then(async pdf => {
+    //     return {body: `email sent to ${pdf}`}
+    //     // await sendEmail(appConfig.recipient, appConfig.subject, pdf).then(result => {
+    //     //     return {body: `email sent to ${result.envelope.to[0]}`}
+    //     // })
+    // }).catch(error => {
+    //     console.error(`generateStatement Error: ${error}`)
+    //     return {body:`generateStatement Error: ${error}` }
+    // })
+
 }
+
+await main()
