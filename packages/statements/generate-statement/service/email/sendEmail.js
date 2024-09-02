@@ -15,10 +15,10 @@ export const sendEmailService = async (
     const {authClient, mailClient} = dependencies
     const {fileName, content} = attachment
     try {
-        // authClient.setCredentials({
-        //     refresh_token: googleEmailConfig.refreshToken,
-        // });
-        // const accessToken = await authClient.getAccessToken();
+        authClient.setCredentials({
+            refresh_token: googleEmailConfig.refreshToken,
+        });
+        const accessToken = await authClient.getAccessToken();
         // const transportOptions = {
         //     service: "gmail",
         //     auth: {
