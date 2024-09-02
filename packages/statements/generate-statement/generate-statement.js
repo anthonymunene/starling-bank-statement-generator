@@ -13,5 +13,5 @@ export const main = async () => {
         console.error(`generateStatement Error: ${error}`)
         return {body:`generateStatement Error: ${error}` }
     })
-    return {body: `generated pdf`}
+    return {body: `generated pdf ${appConfig.company}`}
 }
