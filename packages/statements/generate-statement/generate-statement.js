@@ -4,15 +4,13 @@ import { appConfig} from "./service/variables.js";
 
 
 export const main = async () => {
-    // await generatePDF().then(async pdf => {
-    //     return {body: `email sent to ${pdf}`}
-    //     // await sendEmail(appConfig.recipient, appConfig.subject, pdf).then(result => {
-    //     //     return {body: `email sent to ${result.envelope.to[0]}`}
-    //     // })
-    // }).catch(error => {
-    //     console.error(`generateStatement Error: ${error}`)
-    //     return {body:`generateStatement Error: ${error}` }
-    // })
-
-    return {body: 'something is wrong and i dont know why'}
+    await generatePDF().then(async pdf => {
+        return {body: `email sent to ${pdf}`}
+        // await sendEmail(appConfig.recipient, appConfig.subject, pdf).then(result => {
+        //     return {body: `email sent to ${result.envelope.to[0]}`}
+        // })
+    }).catch(error => {
+        console.error(`generateStatement Error: ${error}`)
+        return {body:`generateStatement Error: ${error}` }
+    })
 }
