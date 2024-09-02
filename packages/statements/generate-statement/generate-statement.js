@@ -9,6 +9,6 @@ export const main = async () => {
             return {body: `email sent to ${result.envelope.to[0]}`}
         })
     }).catch(error => {
-        console.error(error)
+        console.error(`generateStatement Error: ${error}`)
     })
 }

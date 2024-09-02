@@ -43,6 +43,6 @@ export const sendEmailService = async (
         };
         return await smtpTransport.sendMail(mailOptions)
     } catch (error) {
-        console.error(error);
+        console.error(`sendEmailService Error:${error}`);
     }
 };
