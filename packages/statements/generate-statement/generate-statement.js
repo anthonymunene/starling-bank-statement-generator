@@ -19,5 +19,3 @@ export const main = async () => {
     // })
 
 }
-
-await main()
