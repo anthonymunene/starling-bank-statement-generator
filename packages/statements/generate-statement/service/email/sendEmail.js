@@ -19,18 +19,18 @@ export const sendEmailService = async (
             refresh_token: googleEmailConfig.refreshToken,
         });
         const accessToken = await authClient.getAccessToken();
-        // const transportOptions = {
-        //     service: "gmail",
-        //     auth: {
-        //         type: "OAuth2",
-        //         user: googleEmailConfig.email,
-        //         clientId: googleEmailConfig.clientId,
-        //         clientSecret: googleEmailConfig.clientSecret,
-        //         refreshToken: googleEmailConfig.refreshToken,
-        //         accessToken: accessToken.token,
-        //     },
-        // };
-        // const smtpTransport = mailClient(transportOptions);
+        const transportOptions = {
+            service: "gmail",
+            auth: {
+                type: "OAuth2",
+                user: googleEmailConfig.email,
+                clientId: googleEmailConfig.clientId,
+                clientSecret: googleEmailConfig.clientSecret,
+                refreshToken: googleEmailConfig.refreshToken,
+                accessToken: accessToken.token,
+            },
+        };
+        const smtpTransport = mailClient(transportOptions);
         // const mailOptions = {
         //     from: googleEmailConfig.email,
         //     to,
