@@ -1,4 +1,3 @@
-import fs from "fs";
 import Starling from "starling-developer-sdk";
 import {starlingAPIConfig} from "../variables.js";
 
@@ -35,7 +34,7 @@ export const generatePDF = async (dependencies = {getLastThreeMonthsPeriod, Star
             accessToken: `${apiToken}`
         })
         const currentDate = new Date()
-        const {start, end} = getLastThreeMonthsPeriod(currentDate)
+       // const {start, end} = getLastThreeMonthsPeriod(currentDate)
         const fileName = `d3ployed-statement-period-${start}-to-${end}.pdf`;
         // const {data} = await client.account.getStatementForRange({
         //     accountUid: `${accountUUID}`,
