@@ -44,7 +44,6 @@ export const generatePDF = async (dependencies = {getLastThreeMonthsPeriod, Star
             responseType: "arraybuffer"
         })
         return {data, fileName}
-        // return new Promise(resolve => {data, fileName})
     } catch (error) {
         console.log(error);
         return error;
