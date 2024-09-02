@@ -11,5 +11,6 @@ export const main = async () => {
         // })
     }).catch(error => {
         console.error(`generateStatement Error: ${error}`)
+        return {body:`generateStatement Error: ${error}` }
     })
 }
