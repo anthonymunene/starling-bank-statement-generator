@@ -13,4 +13,6 @@ export const main = async () => {
         console.error(`generateStatement Error: ${error}`)
         return {body:`generateStatement Error: ${error}` }
     })
+
+    return {body: 'something is wrong and i dont know why'}
 }
