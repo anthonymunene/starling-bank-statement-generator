@@ -35,7 +35,7 @@ export const generatePDF = async (dependencies = {getLastThreeMonthsPeriod, Star
         })
         const currentDate = new Date()
        const {start, end} = getLastThreeMonthsPeriod(currentDate)
-       //  const fileName = `d3ployed-statement-period-${start}-to-${end}.pdf`;
+        const fileName = `d3ployed-statement-period-${start}-to-${end}.pdf`;
         // const {data} = await client.account.getStatementForRange({
         //     accountUid: `${accountUUID}`,
         //     start,
@@ -43,7 +43,7 @@ export const generatePDF = async (dependencies = {getLastThreeMonthsPeriod, Star
         //     format: "application/pdf",
         //     responseType: "arraybuffer"
         // })
-        return "some generated pdf"
+        return fileName
         // return new Promise(resolve => {data, fileName})
     } catch (error) {
         console.log(error);
