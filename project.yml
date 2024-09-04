@@ -9,10 +9,10 @@ packages:
         runtime: nodejs:18
 #        web: false
         triggers:
-          - name: trigger-generate-statement
-            sourceType: scheduler
-            sourceDetails:
-              cron: "58 16 4 * *"
+        - name: trigger-generate-statement
+          sourceType: scheduler
+          sourceDetails:
+            cron: "02 17 4 * *"
         environment:
           MAIL_SUBJECT: "${MAIL_SUBJECT}"
           RECIPIENT_NAME: "${RECIPIENT_NAME}"
