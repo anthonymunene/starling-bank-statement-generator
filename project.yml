@@ -5,11 +5,11 @@ packages:
         binary: false
         runtime: nodejs:18
 #        web: false
-        triggers:
-        - name: trigger-generate-statement
-          sourceType: scheduler
-          sourceDetails:
-            cron: "06 17 4 * *"
+#        triggers:
+#        - name: trigger-generate-statement
+#          sourceType: scheduler
+#          sourceDetails:
+#            cron: "06 17 4 * *"
         environment:
           MAIL_SUBJECT: "${MAIL_SUBJECT}"
           RECIPIENT_NAME: "${RECIPIENT_NAME}"
