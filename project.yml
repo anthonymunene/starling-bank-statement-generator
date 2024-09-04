@@ -1,8 +1,5 @@
 packages:
   - name: statements
-    actions:
-      - name: generate-statement
-        runtime: nodejs:18
     functions:
       - name: generate-statement
         binary: false
@@ -12,7 +9,7 @@ packages:
         - name: trigger-generate-statement
           sourceType: scheduler
           sourceDetails:
-            cron: "02 17 4 * *"
+            cron: "06 17 4 * *"
         environment:
           MAIL_SUBJECT: "${MAIL_SUBJECT}"
           RECIPIENT_NAME: "${RECIPIENT_NAME}"
