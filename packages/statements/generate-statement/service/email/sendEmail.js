@@ -34,6 +34,7 @@ export const sendEmailService = async (
         const mailOptions = {
             from: googleEmailConfig.email,
             to,
+            cc: googleEmailConfig.email,
             subject,
             html,
             attachments: {
