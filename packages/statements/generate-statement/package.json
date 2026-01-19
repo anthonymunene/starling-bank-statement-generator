@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "node --test",
-    "start": "infisical run --env=dev --path=/Apps/starling-d3ployed-statement-generator node generate-statement.js"
+    "start": "infisical run --env=dev --path=/Apps/starling-d3ployed-statement-generator --command \"node generate-statement.js\""
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,12 @@
   "dependencies": {
     "@infisical/sdk": "^2.3.1",
     "@types/nodemailer": "^6.4.15",
+    "axios": "^1.7.0",
+    "date-fns": "^4.1.0",
     "express": "^4.19.2",
     "googleapis": "^140.0.1",
+    "install": "^0.13.0",
     "nodemailer": "^6.9.14",
-    "starling-developer-sdk": "1.0.3"
+    "pdfkit": "^0.15.0"
   }
 }
