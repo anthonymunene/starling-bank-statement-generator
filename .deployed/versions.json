@@ -1,0 +1,50 @@
+[
+  {
+    "apihost": "https://faas-lon1-917a94a7.doserverless.co",
+    "namespace": "fn-66b89cc4-bec2-4279-9a8a-f2d86cafbecb",
+    "packageVersions": {
+      "statements": {
+        "version": "0.0.36",
+        "digest": "fbabe48718635eba40ccac82954fb8dc2deb2c4147858bfef870df80a12c8a07"
+      }
+    },
+    "actionVersions": {
+      "statements/generate-statement": {
+        "version": "0.0.29",
+        "digest": "8c1160ea0ad9823540feb15d4fab5ec3ef563f863d9ebe85e89186c744ac5288"
+      }
+    }
+  },
+  {
+    "apihost": "https://faas-blr1-8177d592.doserverless.co",
+    "namespace": "fn-714ec026-94a0-4d10-9e7b-64610b3af123",
+    "packageVersions": {
+      "statements": {
+        "version": "0.0.1",
+        "digest": "fbabe48718635eba40ccac82954fb8dc2deb2c4147858bfef870df80a12c8a07"
+      }
+    },
+    "actionVersions": {
+      "statements/generate-statement": {
+        "version": "0.0.1",
+        "digest": "fde415d98aeeacfef6d6448af939f817a67b19c57dd8d00d4d207fb26ad37072"
+      }
+    }
+  },
+  {
+    "apihost": "https://faas-lon1-917a94a7.doserverless.co",
+    "namespace": "fn-67920d2a-9f98-4e3e-bf48-ebdd2760621d",
+    "packageVersions": {
+      "statements": {
+        "version": "0.0.3",
+        "digest": "fbabe48718635eba40ccac82954fb8dc2deb2c4147858bfef870df80a12c8a07"
+      }
+    },
+    "actionVersions": {
+      "statements/generate-statement": {
+        "version": "0.0.3",
+        "digest": "fbe226a61f3d0e03d56ef87a3e111a2bdb089f460405c9f8ab00e8fd0d3e4bce"
+      }
+    }
+  }
+]
