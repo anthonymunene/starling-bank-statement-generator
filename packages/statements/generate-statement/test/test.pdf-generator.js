@@ -8,9 +8,16 @@ describe('PDF generator', () => {
         assert.equal(lastDay,31)
     })
     it('should generate the last 3 months based on the current month being the 1st', () => {
-        const firstOfTheMonth = new Date('August 01, 2024 00:01:00')
+        const firstOfTheMonth = new Date('2024-05-01')
         const {start, end} = getLastThreeMonthsPeriod(firstOfTheMonth)
-        assert.equal(start, '2024-05-01')
-        assert.equal(end, '2024-07-31')
+        assert.equal(start, '2024-01-31')
+        assert.equal(end, '2024-05-01')
     });
+
+    it("should generate the previous years if the last 3 months happens before march", () => {
+        const firstOfTheMonth = new Date('2025-02-01')
+        const {start, end} = getLastThreeMonthsPeriod(firstOfTheMonth)
+        assert.equal(start, '2024-10-31')
+        assert.equal(end, '2025-02-01')
+    })
 });
