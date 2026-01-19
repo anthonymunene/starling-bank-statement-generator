@@ -40,7 +40,7 @@ export const sendEmailService = async (
             attachments: {
                 filename: fileName,
                 content: data,
-                contentType:"application/pdf"
+                contentType: "application/pdf"
             }
         };
         return await smtpTransport.sendMail(mailOptions)
